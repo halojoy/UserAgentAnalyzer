@@ -1,26 +1,21 @@
 # UserAgentAnalyzer
 
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-
 The browser/OS or robot detection by user agent.
-
-[Demo](http://uaatest.000webhostapp.com/)
 
 ## Requirements
 
 * PHP 5.6.0+
 
-## Installation
-
-composer require miovisman/useragentanalyzer
-
 ## Example
 
 ``` php
-$uaa = new UserAgentAnalyzer\UserAgentAnalyzer();
 
-$ua = 'Mozilla/5.0 (Linux; Android 6.0.1; SM-T550 Build/MMB29M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/51.0.2704.81 Safari/537.36 GSA/6.1.28.21.arm';
-$result = $uaa->analyse($ua);
+require('src/UserAgentAnalyzer.php');
+$uaa = new UserAgentAnalyzer();
+
+$useragent = 'Mozilla/5.0 (Linux; Android 6.0.1; SM-T550 Build/MMB29M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/51.0.2704.81 Safari/537.36 GSA/6.1.28.21.arm';
+
+$result = $uaa->analyse($useragent);
 var_dump($result);
 
 #array(8) {
@@ -34,8 +29,9 @@ var_dump($result);
 #  ["osVersion"]=>      string(5) "6.0.1"
 #}
 
-$ua = 'Mozilla/5.0 (compatible; DuckDuckGo-Favicons-Bot/1.0; +http://duckduckgo.com)';
-$result = $uaa->analyse($ua);
+$useragent = 'Mozilla/5.0 (compatible; DuckDuckGo-Favicons-Bot/1.0; +http://duckduckgo.com)';
+
+$result = $uaa->analyse($useragent);
 var_dump($result);
 
 #array(8) {
