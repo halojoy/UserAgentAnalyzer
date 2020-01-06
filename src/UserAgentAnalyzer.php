@@ -7,9 +7,9 @@
  * @license    https://opensource.org/licenses/MIT The MIT License (MIT)
  */
 
-namespace UserAgentAnalyzer;
 
-use InvalidArgumentException;
+
+
 
 class UserAgentAnalyzer
 {
