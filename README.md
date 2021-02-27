@@ -4,7 +4,7 @@ The browser/OS or robot detection by user agent.
 
 ## Requirements
 
-* PHP 5.6.0+
+* PHP 5.6.1
 
 ## Example
 
